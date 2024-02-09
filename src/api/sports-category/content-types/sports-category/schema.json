@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sports_categories",
+  "info": {
+    "singularName": "sports-category",
+    "pluralName": "sports-categories",
+    "displayName": "Sports Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "cities": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::city.city",
+      "inversedBy": "sports_categories"
+    }
+  }
+}
